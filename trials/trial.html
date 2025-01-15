@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="trial.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="logo.png" alt="" class="logo-img">
+        </a>
+    
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#">Frames</a>
+            <a href="#">Hampers</a>
+            <a href="#">Wallpapers</a>
+            <a href="#footer">Contact</a>
+        </nav>
+    </header>
+    
+
+
+
+    <!-- <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Shop Surprize Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Trophies</a></li>
+            <li><a href="#frames">Frames</a></li>
+            <li><a href="#hampers">Hampers</a></li>
+            <li><a href="#mugs">Printed Mug</a></li>
+            <li><a href="#pillows">Customised Pillow</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav> -->
+    
+    <!--evet section starts here-->
+    <section class="products" id="products">
+      <h1 class="heading">Surprize</h1>
+      <div class="container">
+          <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <img src="clock.png" alt="Clock">
+                      <div class="product-overlay-container">
+                          <div class="product-info">
+                              <p class="title">Clock</p>
+                              <div class="separator"></div>
+                              <p class="info">$750</p>
+                              <button class="see-more-button" onclick="window.location.href=''">See More</button>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                      <img src="watch.png" alt="Watch">
+                      <div class="product-overlay-container">
+                          <div class="product-info">
+                              <p class="title">BRAND RAISE</p>
+                              <div class="separator"></div>
+                              <p class="info">$1200</p>
+                              <button class="see-more-button" onclick="window.location.href=''">See More</button>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="cup.png" alt="Watch">
+                    <div class="product-overlay-container">
+                        <div class="product-info">
+                            <p class="title">cup</p>
+                            <div class="separator"></div>
+                            <p class="info">$250</p>
+                            <button class="see-more-button" onclick="window.location.href=''">See More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="trophy.png" alt="Watch">
+                  <div class="product-overlay-container">
+                      <div class="product-info">
+                          <p class="title">BRAND RAISE</p>
+                          <div class="separator"></div>
+                          <p class="info"></p>
+                          <button class="see-more-button" onclick="window.location.href=''">See More</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="watch.png" alt="Watch">
+                <div class="product-overlay-container">
+                    <div class="product-info">
+                        <p class="title">BRAND RAISE</p>
+                        <div class="separator"></div>
+                        <p class="info">PRODUCT MAKING FROM SCRATCH</p>
+                        <button class="see-more-button" onclick="window.location.href=''">See More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="watch.png" alt="Watch">
+              <div class="product-overlay-container">
+                  <div class="product-info">
+                      <p class="title">BRAND RAISE</p>
+                      <div class="separator"></div>
+                      <p class="info"></p>
+                      <button class="see-more-button" onclick="window.location.href=''">See More</button>
+                  </div>
+              </div>
+          </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+          <script>
+            //event-section-slider-js------------starting--------------------------------
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows: true,
+    },
+    loop: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+});
+
+// Get the Swiper container
+const swiperContainer = document.querySelector('.swiper');
+
+// Pause autoplay on hover
+swiperContainer.addEventListener('mouseenter', () => {
+    swiper.autoplay.stop();
+});
+
+// Resume autoplay when hover ends
+swiperContainer.addEventListener('mouseleave', () => {
+    swiper.autoplay.start();
+});
+
+// Pause autoplay on click
+swiperContainer.addEventListener('click', () => {
+    swiper.autoplay.stop();
+});
+
+//event-section-slider-js------------ending----
+
+const menuIcon = document.getElementById('menu-icon');
+const navbar = document.querySelector('.navbar');
+
+menuIcon.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+});
+
+          </script>
+    
+
+
+
+  <style>
+    /* Modal background */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Modal content (image) */
+    .modal-content {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Close button */
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    .close:hover {
+      color: #bbb;
+    }
+    /* General styling for the body */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  padding: 40px;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  padding: 40px;
+  color: #000000;
+}
+
+.row-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 20px 0 10px; /* Center the margin */
+  color: #000000;
+  /* border-left: 4px solid #000000; */
+  padding-left: 10px;
+  padding: 40px;
+}
+  /* General grid styling */
+  .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .product-card {
+      width: 200px;
+      text-align: center;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .product-info {
+      padding: 10px;
+    }
+
+    .product-info h3 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+    }
+
+    .product-info p {
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* Modal styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 8px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Product grid remains unchanged -->
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="a1.jpg" alt="Product 1">
+      <div class="product-info"><h3>A1 Frame</h3><p>2800</p></div>
+    </div>
+    <div class="product-card">
+      <img src="a4.jpg" alt="Product 2">
+      <div class="product-info"><h3>A2 Frame</h3><p>1800</p></div>
+    </div>
+    <!-- Add more product cards as needed -->
+  </div>
+
+  <!-- Modal structure -->
+  <div id="modal" class="modal">
+    <button class="close" id="closeModal">&times;</button>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <script>
+    // Get modal elements
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    // Add click event listeners to images
+    document.querySelectorAll('.product-card img').forEach(img => {
+      img.addEventListener('click', () => {
+        modal.style.display = 'flex'; // Show modal
+        modalImage.src = img.src; // Set modal image source
+      });
+    });
+
+    // Close modal when clicking on close button
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+
+
+
+</body>
+</html>

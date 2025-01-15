@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Add Products</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Admin Dashboard</h1>
+            <p>Manage your products with ease</p>
+        </header>
+
+        <section class="form-section">
+            <h2>Add Product</h2>
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="productName">Product Name:</label>
+                    <input type="text" id="productName" name="productName" placeholder="Enter product name" required>
+                </div>
+                <div class="form-group">
+                    <label for="productDescription">Description:</label>
+                    <textarea id="productDescription" name="productDescription" placeholder="Enter product description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="productImage">Upload Image:</label>
+                    <input type="file" id="productImage" name="productImage" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Price (₹):</label>
+                    <input type="number" id="productPrice" name="productPrice" placeholder="Enter product price" required>
+                </div>
+                <button type="submit" class="submit-btn">Add Product</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Shop Surprize Admin Dashboard</p>
+        </footer>
+    </div>
+</body>
+</html>
