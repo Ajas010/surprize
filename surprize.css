@@ -256,7 +256,7 @@ body {
 .footer {
     background: #333; /* Dark background for contrast */
     color: #fff; /* White text for readability */
-    padding: 20px;
+    padding: 40px;
     text-align: center;
     font-size: 1.4rem;
     line-height: 2;
@@ -374,66 +374,6 @@ body {
 .product-description.see-more-button:hover {
     background-color: var(--main-color);
 }
-/* product in grid */
-
-/* General styling for the body */
-/* body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-} */
-
-/* Styling for the product grid container */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
-/* Styling for each product card */
-.product-card {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Styling for the product image */
-.product-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Styling for the product info section */
-.product-info {
-    padding: 15px;
-    text-align: center;
-}
-
-.product-info h3 {
-    font-size: 18px;
-    color: #333;
-    margin: 10px 0;
-}
-
-.product-info p {
-    font-size: 14px;
-    color: #666;
-    margin: 5px 0 0;
-}
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
@@ -518,4 +458,62 @@ body {
     font-size: 14px;
     padding: 0 10px;
     color: #ffffff;
+  }
+
+
+
+  /* newgrid */
+  
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 40px;
+    max-width: 1250px;
+    margin: 0 auto;
+    place-items: center;
+    justify-content: center;
+  }
+  
+  /* Styling for each product card */
+  .product-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    border-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling for the product image */
+  .product-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Styling for the product info section */
+  .product-info {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .product-info h3 {
+    font-size: 25px;
+    color: #ffffff;
+    margin: 10px 0;
+  }
+  
+  .product-info p {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 5px 0 0;
   }

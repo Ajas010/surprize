@@ -373,6 +373,103 @@ h1 {
   </script>
 
 
+  <style>
+    /* body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    } */
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .container p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin: 15px 0 5px;
+      color: black;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: green;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Shop for Your Valentine</h1>
+    <p>12 Items</p>
+    <div class="grid">
+      <div class="card">
+        <img src="a4.jpg" alt="Men's Slippers">
+        <h3>Men’s Slippers & Flip Flops</h3>
+        <p>Min. 70% Off</p>
+      </div>
+      <div class="card">
+        <img src="a1.jpg" alt="Casual Shirts">
+        <h3>Casual Shirts</h3>
+        <p>Min. 50% Off</p>
+      </div>
+      <div class="card">
+        <img src="a1.jpg" alt="Men's Casual Shoes">
+        <h3>Men’s Casual Shoes</h3>
+        <p>Min. 70% Off</p>
+      </div>
+      <div class="card">
+        <img src="a1.jpg" alt="Men's Sports Shoes">
+        <h3>Men’s Sports Shoes</h3>
+        <p>Min. 70% Off</p>
+      </div>
+    </div>
+  </div>
+
+
+
 
 </body>
 </html>
